@@ -26,9 +26,21 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this@MainActivity, ""+editTextInput, Toast.LENGTH_LONG).show()
 //        }
 
-        // Image view
-        val img :ImageView = findViewById(R.id.img)
+//        // Image view
+//        val img :ImageView = findViewById(R.id.img)
+//
+//        img.setImageResource(R.drawable.image)
 
-        img.setImageResource(R.drawable.image)
+        val name : EditText = findViewById(R.id.givenName)
+
+        val button : Button = findViewById(R.id.button)
+
+        val image : ImageView = findViewById(R.id.img)
+
+        button.setOnClickListener() {
+            val editTextInput = name.text
+            Toast.makeText(this@MainActivity,"Wellcome "+editTextInput,Toast.LENGTH_LONG).show()
+            image.setImageResource(R.drawable.screenshot)
+        }
     }
 }
