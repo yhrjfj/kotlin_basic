@@ -15,13 +15,14 @@ class MainActivity : AppCompatActivity() {
         // EditText View
         val et : TextView = findViewById(R.id.editText1)
 
-        val editTextInput = et.text
-
         // Button view
         val btn : Button = findViewById(R.id.button)
         // Handle event click on button
         btn.setOnClickListener(){
-            Toast.makeText(this@MainActivity, "Button has been clicked", Toast.LENGTH_LONG).show()
+
+            val editTextInput = et.text
+
+            Toast.makeText(this@MainActivity, ""+editTextInput, Toast.LENGTH_LONG).show()
         }
     }
 }
